@@ -1,0 +1,343 @@
+/* ================================
+   GOGETEM GLOBAL STYLING
+   Fully’GoGetEm’Loaded | RSMG
+   ================================ */
+
+/* Brand Variables */
+:root {
+    --bg-dark: #08080a;
+    --bg-card: #121216;
+    --bg-accent: #1a1a24;
+
+    /* GOGETEM Brand Colors */
+    --primary-color: #D4AF37;      /* Gold - Luxury Boss */
+    --secondary-color: #8B0000;    /* Dark Red - Aggressive */
+
+    --text-main: #ffffff;
+    --text-muted: #8e8e93;
+}
+
+/* Reset & Base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-main);
+    overflow-x: hidden;
+}
+
+/* Containers & Sections */
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.container.narrow {
+    max-width: 600px;
+}
+
+.section {
+    padding: 100px 0;
+}
+
+.dark-bg { background-color: #0c0c10; }
+.explicit-bg { background-color: #050507; }
+
+.section-title {
+    font-size: 2.2rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 40px;
+    text-align: center;
+    color: var(--primary-color);
+}
+
+.section-subtitle {
+    text-align: center;
+    color: var(--text-muted);
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+/* Header / Navigation */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    background-color: rgba(8, 8, 10, 0.9);
+    backdrop-filter: blur(10px);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid rgba(212, 175, 55, 0.3);
+}
+
+.logo {
+    font-size: 1.2rem;
+    font-weight: 900;
+    letter-spacing: 3px;
+    color: var(--primary-color);
+}
+
+nav a {
+    color: var(--text-main);
+    text-decoration: none;
+    margin-left: 18px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: color 0.2s, transform 0.2s;
+}
+
+nav a:hover {
+    color: var(--primary-color);
+    transform: translateY(-1px);
+}
+
+/* Hero Section */
+.hero-section {
+    height: 85vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-position: center;
+    background-size: cover;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: radial-gradient(circle at top, rgba(212,175,55,0.25), transparent),
+                linear-gradient(to bottom, rgba(8,8,10,0.6), var(--bg-dark));
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    padding: 0 20px;
+}
+
+.hero-subtitle {
+    text-transform: uppercase;
+    color: var(--primary-color);
+    letter-spacing: 4px;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    font-weight: 900;
+    letter-spacing: 3px;
+    margin-bottom: 30px;
+    text-shadow: 0 0 20px rgba(0,0,0,0.8);
+}
+
+.cta-btn {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: #000;
+    padding: 14px 36px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 30px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: transform 0.2s, box-shadow 0.2s, background-color 0.2s;
+}
+
+.cta-btn:hover {
+    transform: scale(1.05);
+    background-color: #e0c04a;
+    box-shadow: 0 0 20px rgba(212,175,55,0.7);
+}
+
+/* Music Block */
+.music-block {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 40px;
+    background-color: var(--bg-card);
+    padding: 40px;
+    border-radius: 16px;
+    border: 1px solid rgba(255,255,255,0.05);
+    align-items: center;
+}
+
+.album-wrapper {
+    flex: 1;
+    min-width: 260px;
+    max-width: 420px;
+    margin: 0 auto;
+}
+
+.album-art {
+    width: 100%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 18px 40px rgba(0,0,0,0.7);
+    border: 2px solid rgba(212,175,55,0.5);
+}
+
+.player-controls {
+    flex: 1.2;
+    min-width: 280px;
+}
+
+.player-controls h3 {
+    font-size: 1.8rem;
+    margin-bottom: 8px;
+}
+
+.track-meta {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    margin-bottom: 25px;
+}
+
+.audio-player-container {
+    margin-bottom: 30px;
+}
+
+.native-audio {
+    width: 100%;
+}
+
+/* Platform Grid */
+.grid-label {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--text-muted);
+    margin-bottom: 12px;
+}
+
+.platform-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+    gap: 12px;
+}
+
+.platform-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 44px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.85rem;
+    color: #fff;
+    background-color: var(--bg-accent);
+    transition: background-color 0.2s, transform 0.2s, box-shadow 0.2s;
+}
+
+.platform-link:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 12px rgba(0,0,0,0.6);
+}
+
+/* Platform Hover Colors */
+.spotify:hover { background-color: #1DB954; }
+.apple:hover { background-color: #FC3C44; }
+.youtube:hover { background-color: #FF0000; }
+.yt-music:hover { background-color: #FF0000; box-shadow: inset 0 0 0 1px #fff; }
+.tiktok:hover { background-color: #000000; box-shadow: 2px 2px 0 #00f2fe, -2px -2px 0 #fe0979; }
+.instagram:hover { background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); }
+.facebook:hover { background-color: #1877F2; }
+
+/* Video Wrapper */
+.video-wrapper {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    height: 0;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.7);
+    border: 1px solid rgba(212,175,55,0.4);
+}
+
+.video-wrapper iframe {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+}
+
+/* About / Movement / Booking Photos */
+.about-photo,
+.movement-photo,
+.booking-photo {
+    display: block;
+    max-width: 420px;
+    width: 100%;
+    margin: 0 auto 30px auto;
+    border-radius: 12px;
+    box-shadow: 0 18px 40px rgba(0,0,0,0.7);
+    border: 2px solid rgba(212,175,55,0.5);
+}
+
+/* Gallery Grid */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 18px;
+}
+
+.gallery-grid img {
+    width: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+    box-shadow: 0 16px 35px rgba(0,0,0,0.7);
+    border: 1px solid rgba(255,255,255,0.08);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 40px 20px;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    border-top: 1px solid rgba(255,255,255,0.05);
+    margin-top: 40px;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+
+    nav a {
+        margin: 0 8px;
+    }
+
+    .hero-content h1 {
+        font-size: 2.4rem;
+    }
+
+    .music-block {
+        padding: 24px;
+        flex-direction: column;
+    }
+
+    .section {
+        padding: 70px 0;
+    }
+}
